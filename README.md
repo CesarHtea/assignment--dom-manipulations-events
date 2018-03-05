@@ -2,5 +2,5 @@
 
 ##Content
 
-All of your work is in the `main.js` file.
+All the work is in the `main.js` file.
 
