@@ -8,7 +8,6 @@ const botonNavBar = document.querySelector("#hide-nav button")
 
 botonNavBar.addEventListener("click" , ocultarNav) 
 function ocultarNav() {
-	console.log("hi hellos")
 	navBar.classList.toggle("nav-menu-hidden")
 }
 
@@ -20,7 +19,6 @@ const arrayColor = [...changeBox]
 for ( i = 0 ; i < arrayColor.length ; i++ ) {
 	arrayColor[i].addEventListener ("click", changeColor)}
 function changeColor(e) {
-			// console.log("hi hellow")
 			// console.log(e.currentTarget)
 	const item = e.currentTarget
 	item.classList.toggle("selected")
@@ -39,11 +37,31 @@ var resultNum = parseInt(result.textContent)
 
 function plus(event) {
 	let number = parseInt(event.target.textContent)
-	console.log(event.target.textContent)
+	// console.log(event.target.textContent)
 	result.textContent = resultNum += number
 }
 
 
 // TASK 4 -- Add Guest to List
 
+const papaGoodStanding = document.querySelector("#list-2-list .good-standing-list")
+// console.log(papaGoodStanding)
+const papaProbation = document.querySelector("#list-2-list .probation-list")
+// console.log(papaProbation)
+arrayOfNames = [...document.querySelectorAll("li")]
+// console.log(arrayOfNames)
+for ( i = 0 ; i < arrayOfNames.length ; i++) {
+	arrayOfNames[i].addEventListener ("click", function(e) {
+		if (e.target.parentNode === papaGoodStanding) papaProbation.appendChild(e.target)	
+		else papaGoodStanding.appendChild(e.target)  
+	})
+}
+
+
 // TASK 5 -- (Adventure Mode)-- Add + Remove Item From List
+
+console.log("ahora siguen los colores")
+
+arrayDeColores = [...document.querySelectorAll("#change-colors .palette span")]
+console.log(arrayDeColores)
+
