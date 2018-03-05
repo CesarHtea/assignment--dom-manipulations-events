@@ -2,9 +2,20 @@
 
 // TASK 1 -- Show/Hide Nav
 
+const navBar = document.querySelector("#hide-nav .nav-menu")
+
+const botonNavBar = document.querySelector("#hide-nav button")
+
+botonNavBar.addEventListener("click" , ocultarNav) 
+function ocultarNav() {
+	console.log("hi hellos")
+	navBar.classList.toggle("nav-menu-hidden")
+}
+
 // TASK 2 -- Select an Icon
 
 const changeBox = document.querySelectorAll(".wish-list .option")
+// console.log(changeBox)
 const arrayColor = [...changeBox]
 for ( i = 0 ; i < arrayColor.length ; i++ ) {
 	arrayColor[i].addEventListener ("click", changeColor)}
