@@ -60,8 +60,21 @@ for ( i = 0 ; i < arrayOfNames.length ; i++) {
 
 // TASK 5 -- (Adventure Mode)-- Add + Remove Item From List
 
-console.log("ahora siguen los colores")
+// console.log("ahora siguen los colores")
+
 
 arrayDeColores = [...document.querySelectorAll("#change-colors .palette span")]
-console.log(arrayDeColores)
-
+// console.log(arrayDeColores)
+const cuadroTexto = document.querySelector("#change-colors .msg")
+// console.log(cuadroTexto)
+for ( i = 0 ; i < arrayDeColores.length ; i++ ) {
+	arrayDeColores[i].addEventListener("click", function(e) {
+		cuadroTexto.classList.remove("bg-yellow")
+		cuadroTexto.classList.remove("bg-orange")
+		cuadroTexto.classList.remove("bg-red")
+		cuadroTexto.classList.remove("bg-green")
+		cuadroTexto.classList.remove("bg-purple")
+		let nuevoColor = e.target.className
+	 	cuadroTexto.classList.add(nuevoColor)
+	})
+}
